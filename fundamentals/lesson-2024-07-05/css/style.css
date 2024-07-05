@@ -1,0 +1,28 @@
+
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+
+button:hover {
+    background-color: rgb(159, 207, 36);
+}
+
+
+div {
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    transition: width 2s;
+}
+
+div:hover {
+    width: 300px;
+}
+
