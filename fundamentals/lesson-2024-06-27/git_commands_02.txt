@@ -1,0 +1,73 @@
+git log
+git branch
+git checkout main
+git status
+
+git restore learn_to_code.txt
+
+git add .
+
+git restore --staged learn_to_code.txt
+
+git branch
+
+git diff
+
+git diff dev
+
+git diff main feature
+git checkout feature 
+git log
+clear
+
+git branch
+git checkout main
+git merge dev
+
+git status
+git checkout dev
+git status
+git checkout main
+git add *
+git commit -m 'We are back from the break.'
+git status
+git checkout dev
+
+git add .
+
+git commit -m 'Modify 4th line on dev'
+
+git checkout main
+
+git merge dev
+git merge --abort
+git status
+
+git merge dev
+git status
+git add .
+git status
+git commit -m 'Successfully merged dev to main.'
+
+git log --oneline
+
+git checkout b70530d
+git branch
+git checkout main
+
+git log --oneline --graph --decorate
+touch go_to_lunch.txt
+nano go_to_lunch.txt
+
+
+We are having pizza in the lunch break.
+
+The lunch break will be until 13:10.
+
+
+[ctl+X]
+
+Y
+
+Enter
+

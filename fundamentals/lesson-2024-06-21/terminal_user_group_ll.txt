@@ -1,0 +1,47 @@
+# Creating Users and Groups
+
+sudo useradd alex
+sudo useradd emily
+sudo useradd -m thomas
+
+sudo groupadd developers
+
+
+# Adding user to a group
+
+sudo usermod -aG developers alex
+sudo usermod -aG developers emily
+
+# Changing the owner
+
+sudo chown alex:developers /directory
+
+
+# Understanding Permissions
+
+ls -l
+
+ll
+
+total 48
+drwxrwxr-x 3 dci dci 4096 Jun 20 13:29 programs/
+-rw-rw-r-- 1 dci dci  346 Jun 20 13:41 combine.txt
+
+
+# Wildcard *
+
+ls *.txt
+
+ls combine*
+
+cp *.txt combine_all/
+
+mv *.txt combine_all/
+
+rm *.txt
+
+
+
+
+
+

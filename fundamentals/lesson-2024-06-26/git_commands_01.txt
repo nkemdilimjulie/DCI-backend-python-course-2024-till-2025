@@ -1,0 +1,59 @@
+ 
+ # Getting started with git.
+ 
+ sudo apt install git
+ 
+ git config --global user.name "Your Name"
+ git config --global user.email youremail@gmail.com
+ 
+ mkdir projects
+ 
+ cd projects/
+ 
+ mkdir learn-git
+ 
+ cd learn-git/
+ 
+ git init
+ 
+ git status
+ 
+ # To rename master branch to main branch
+ 
+ git branch -m main
+ 
+ git status
+ 
+ touch learn_to_code.txt
+ 
+ git status
+ 
+ git add learn_to_code.txt
+ 
+ git status
+ 
+ git commit -m 'Create a new file'
+ 
+ git status
+ 
+ git log
+ 
+ # Press 'q' to quit.
+ 
+ # To create a new branch
+ 
+ git branch dev
+ 
+ # To switch to a different branch
+ 
+ git checkout dev
+ 
+ git checkout main
+ 
+ # Another way to create and switch to a different branch
+ 
+ git checkout -b feature
+ 
+ git checkout dev
+ 
+ 

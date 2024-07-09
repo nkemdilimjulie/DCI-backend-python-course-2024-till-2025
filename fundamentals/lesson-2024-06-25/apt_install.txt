@@ -1,0 +1,34 @@
+sudo apt update
+
+sudo apt upgrade
+
+curl --version
+
+sudo apt install curl
+
+git --version
+
+sudo apt install git
+
+sudo apt install chromium-browser
+
+chromium-browser
+
+ifconfig
+
+sudo apt install net-tools
+
+ifconfig
+
+curl ifconfig.me
+
+
+https://mattermost.com/apps/
+
+sudo dpkg -i appname
+
+sudo apt install ./package_name.deb
+
+sudo apt remove curl
+
+sudo snap install curl
