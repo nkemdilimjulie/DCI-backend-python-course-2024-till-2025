@@ -170,7 +170,7 @@ minimum_num = min(44, -35, 127, 500, 3, -77, 222)
 
 # print(number)
 
-# number = pow(3, 7) # 3^3 = 3 * 3 * 3 * 3 * 3 * 3 * 3
+# number = pow(3, 7) # 3^7 = 3 * 3 * 3 * 3 * 3 * 3 * 3
 
 # print(number)
 
