@@ -160,7 +160,9 @@ minimum_num = min(44, -35, 127, 500, 3, -77, 222)
 
 # number = -2550
 
-# abs_num = abs(4-3j) # -20
+# abs_num = abs(5-25) # -20
+
+# abs_num = abs(4-3j)
 
 # print(abs_num)
 
