@@ -113,4 +113,14 @@ single_char = name[5]
 
 # print(name[::-1])
 
-print(name[-1])
+# print(name[-1])
+
+# String Concatenation
+
+text_1 = 'Monalisa is a famous painting.'
+
+text_2 = 'It is dislayed on a famous meusium in Paris.'
+
+full_text = text_1 + ':' + text_2 + ' Pyramid'
+
+print(text_1 + ':' + text_2 + ' Pyramid')
