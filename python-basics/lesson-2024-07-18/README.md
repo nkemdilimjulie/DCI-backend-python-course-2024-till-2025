@@ -6,7 +6,7 @@
 * String method
 * Exercises
 
-## Today - 2024-07-17
+## Today - 2024-07-18
 
 * Function
 * String methods

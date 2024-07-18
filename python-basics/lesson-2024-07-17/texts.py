@@ -66,7 +66,7 @@ text = 'hello world, we are learning about texts in Python.'
 
 
 
-# text = 'Monalisa is a famous painting. It is dislayed on a famous meusium in Paris famous.'
+# text = 'Monalisa is a famous painting. It is displayed on a famous meusium in Paris famous.'
 
 
 # newText = text.replace('famous', 'beautiful', 1)
@@ -75,7 +75,7 @@ text = 'hello world, we are learning about texts in Python.'
 
 
 
-# text = 'Monalisa is a famous painting. It is dislayed on a famous meusium in Paris.'
+# text = 'Monalisa is a famous painting. It is displayed on a famous meusium in Paris.'
 
 
 # words = text.split(sep='famous', maxsplit=1)
@@ -84,7 +84,7 @@ text = 'hello world, we are learning about texts in Python.'
 # print(words)
 
 
-# text_list = ['Monalisa', 'is', 'a', 'famous', 'painting.', 'It', 'is', 'dislayed', 'on', 'a', 'famous', 'meusium', 'in', 'Paris', 'famous.']
+# text_list = ['Monalisa', 'is', 'a', 'famous', 'painting.', 'It', 'is', 'displayed', 'on', 'a', 'famous', 'meusium', 'in', 'Paris', 'famous.']
 
 
 # text = ' '.join(text_list)
@@ -94,7 +94,7 @@ text = 'hello world, we are learning about texts in Python.'
 
 
 
-# text = 'Monalisa is a famous painting. It is dislayed on a famous meusium in Paris.'
+# text = 'Monalisa is a famous painting. It is displayed on a famous meusium in Paris.'
 
 name = 'Monalisa'
 
@@ -119,7 +119,7 @@ single_char = name[5]
 
 text_1 = 'Monalisa is a famous painting.'
 
-text_2 = 'It is dislayed on a famous meusium in Paris.'
+text_2 = 'It is displayed on a famous meusium in Paris.'
 
 full_text = text_1 + ':' + text_2 + ' Pyramid'
 

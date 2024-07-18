@@ -126,6 +126,12 @@ text = 'Far across the distance'
 
 # strip method
 
+# text = '      Far across the distance and spaces between us       '
+
+# new_text = text.strip()
+# new_text = text.lstrip()
+# new_text = text.rstrip() + 't'
+
 
 # text = '------Far across the distance and spaces between us------'
 
@@ -145,6 +151,85 @@ new_text = text % ('already', 1310)
 print(text)
 print(new_text)
 
-'--f--'
+# String format
+
+# text = 'Lunch time is %s passed until %d:%d o\'clock.'
+
+# new_text = text % ('already', 13, 10)
+
+# print(text)
+# print(new_text)
+
+# print(f'{13:10} lets see')
+
+'String format'
+
+# text = 'The {} was really good. Now I just need some {}. Euro {} is won by {}.'.format('dinner', 'rest', 2020, 'France')
+
+# text = 'The {3} was really good. Now I just need some {2}. Euro {1} is won by {0}.'
+
+# new_text = text.format('dinner', 'rest', 2020, 'France')
+
+# print(text)
+# print(new_text)
+
+
+# text = 'The {0} was really good. Now I just need some {1}. Euro {year} is won by {country}.'
+
+# new_text = text.format('dinner', 'rest', year=2020, country='France')
+
+
+# print(text)
+# print(new_text)
+
+
+# f-string
+
+# day = 'Friday'
+
+# day = input('Enter a weekday: ')
+
+# num = input('Enter day number: ')
+
+
+# text = f'{day.capitalize()} is the {num}th day of the week. ' + f'Saturday comes after Friday.'
+
+# print(text)
+
+
+# def weekday():
+#     day = input('Enter a weekday: ')
+
+#     num = input('Enter day number: ')
+#     text = f'{day.capitalize()} is the {num}th day of the week. ' + f'Saturday comes after Friday.'
+
+#     return text
+
+# print(weekday())
+
+
+def count_string(txt, sub_txt):
+
+    count_num = txt.count(sub_txt)
+
+    result = f'We found {sub_txt.upper()} in the original text {count_num} times.'
+
+    return result
+
+
+text = 'We are almost done with the lesson.'
+
+sub_text = 'done'
+
+x = count_string(text, sub_text)
+y = count_string('Hello Exercises', 'E')
+
+print(x)
+print(y)
+
+# correct version 
+print(f"{13}:{10} lets see")
+
+
 
 
