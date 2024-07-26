@@ -136,4 +136,33 @@ activities = {'Hockey', 'Tennis'}
 
 # print(activities.issuperset(sports))
 
-print(sports.issuperset(activities))
+# print(sports.issuperset(activities))
+
+
+# text = 'I\'m a string'
+
+# print(text)
+# x=5
+# for i in range(5):   
+#     print(i*i)
+# else:
+#     print(i*100)
+# print(i*100)
+
+# x = True
+# while x:
+#     print(55)
+#     x = False
+# else:
+#     print(77)
+
+# print(77)
+
+
+sports_frozen = frozenset(sports)
+
+activities_fz = frozenset({'Walting', 'Running', 'Talking', 'Eating'})
+
+print(sports)
+print(sports_frozen)
+print(activities_fz)
