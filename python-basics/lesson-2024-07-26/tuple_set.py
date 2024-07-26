@@ -161,7 +161,7 @@ activities = {'Hockey', 'Tennis'}
 
 sports_frozen = frozenset(sports)
 
-activities_fz = frozenset({'Walting', 'Running', 'Talking', 'Eating'})
+activities_fz = frozenset({'Walking', 'Running', 'Talking', 'Eating'})
 
 print(sports)
 print(sports_frozen)
