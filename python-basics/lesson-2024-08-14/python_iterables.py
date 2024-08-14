@@ -216,18 +216,125 @@ books = {
 }
 
 
+def book_func(x):  
+    return x[1] # returns value of 2nd index position in a list, tuple
+
+
+# new_books = sorted(books.items(), reverse=True, key=book_func)
+
+# print(new_books)
+
+
+
+# lambda function
+
+def square(x):
+    return x**2
+
+
+def double(x):
+    return x * 2
+
+# print(square(5))
+# print(double(50))
+
+
+
+
+
+multiply_by_2 = lambda x: x * 2
+
+# print(multiply_by_2(20))
+
+
+
+def addition(a, b, c):
+    return a + b+ c
+
+
+add_lambda = lambda a, b, c: a + b + c
+
+# print(addition(10, 5, 5))
+# print(add_lambda(10, 5, 5))
+
+
 def book_func(x):
     return x[1]
 
 
-new_books = sorted(books.items(), reverse=True, key=book_func)
+# book_lambda = lambda x: x[1]
 
-print(new_books)
+day = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+# books = ('Harry Potter And The Sorcerer\'s Stone', 66542300)
+
+# print(book_lambda(books))
+
+# new_books = sorted(books.items(), reverse=True, key=book_lambda)
+
+
+# new_books = sorted(books.items(), reverse=True, key=lambda x: x[1])
+
+
+# print(sorted(books.items(), reverse=True, key=lambda x: x[1]))
+
+# print(new_books)
 
 
 
+numbers = [2, 5, 10] # [4, 10, 20]
 
 
+# e = []
 
+# for i in numbers:
+#     d = i * 2
+#     e.append(d)
+
+# print(e)
+
+# map()
+
+# numbers = [2, 5, 10] # [4, 10, 20]
+
+double_func = lambda x: x * 2
+
+# new_numbers = list(map(double_func, numbers))
+
+# new_numbers = list(map(lambda x: x * 2, numbers))
+
+# print(list(map(lambda x: x * 2, numbers)))
+
+# print(list(map(lambda x: x * 2, [2, 5, 10])))
+
+# print(list(map(lambda x: x * 2, range(20))))
+
+# print(new_numbers)
+
+# print(list(map(lambda x: x * 10, range(20))))
+
+# n = int(input('Enter a number: '))
+
+# print(list(map(lambda x: x**n, range(20))))
+
+# n = 2
+# m = \*
+
+print(list(map(lambda x: x*3, range(20))))
+
+
+# filter()
+
+
+numbers = [2, 5, 10, 15, 20, 30] # [5, 15]
+
+num_lambda = lambda x: x % 2 == 1 # returns True for each odd number
+
+odd_numbers = list(filter(num_lambda, numbers))
+
+# print(odd_numbers)
+
+
+print(list(filter(lambda x: x % 2 == 0, numbers)))
 
 
