@@ -129,15 +129,25 @@ od = collc.OrderedDict(website_config)
 
 # print(od['name'])
 
-print(od)
+# print(od)
 
-od.move_to_end('url')
+# od.move_to_end('url')
 
-print(od)
+# print(od)
 
 # ChainMap()
 
-collc.ChainMap
+# collc.ChainMap
 
 
+# from datetime import datetime
+
+import datetime
+
+print(datetime.datetime.now())
+
+print(datetime.datetime.today())
+
+
+from zoneinfo import ZoneInfo
 
