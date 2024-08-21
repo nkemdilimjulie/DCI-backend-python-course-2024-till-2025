@@ -144,10 +144,69 @@ od = collc.OrderedDict(website_config)
 
 import datetime
 
-print(datetime.datetime.now())
+# print(datetime.datetime.now())
 
-print(datetime.datetime.today())
+# print(datetime.datetime.today())
 
 
 from zoneinfo import ZoneInfo
+
+
+
+# ChainMap()
+
+dictionary_1 = {
+    'name': 'Python',
+    'url': 'https://python.org',
+    'office': 'Silicon valley 107',
+    'ssl': 'Letsencrypt'
+}
+
+dictionary_2 = {
+    'name': 'Regex',
+    'url': 'https://regexlearn.com',
+    'office': 'California 373',
+    'ssl': 'Letsencrypt'
+}
+
+import collections
+
+chain_dictionary = collections.ChainMap(dictionary_1, dictionary_2)
+
+# print(chain_dictionary) 
+
+# Output: ChainMap({'name': 'Python', 'url': 'https://python.org', 'office': 'Silicon valley 107', 'ssl': 'Letsencrypt'}, {'name': 'Regex', 'url': 'https://regexlearn.com', 'office': 'California 373', 'ssl': 'Letsencrypt'})
+
+# print(chain_dictionary['name']) # Output: Python
+
+
+# print(chain_dictionary.maps) 
+
+# Output: [{'name': 'Python', 'url': 'https://python.org', 'office': 'Silicon valley 107', 'ssl': 'Letsencrypt'}, {'name': 'Regex', 'url': 'https://regexlearn.com', 'office': 'California 373', 'ssl': 'Letsencrypt'}]
+
+
+
+# print(chain_dictionary.maps[1])
+
+# Output: {'name': 'Regex', 'url': 'https://regexlearn.com', 'office': 'California 373', 'ssl': 'Letsencrypt'}
+
+
+# print(chain_dictionary.maps[1]['ssl']) # Output: Letsencrypt
+
+# print(dictionary_1['name']) # Output: Python
+
+# [1, 2, 3].extend()
+
+
+# namedtuple()
+
+coordinate = collc.namedtuple('Location', ['lattitude', 'longitude'])
+
+place = coordinate(34.55, 120.77) # Object/Instance
+
+# print(place) # Output: Location(lattitude=34.55, longitude=120.77)
+
+print(place.lattitude) # Output: 34.55
+
+print(place.longitude) # Output: 120.77
 
