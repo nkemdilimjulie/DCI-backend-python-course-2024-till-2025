@@ -217,7 +217,7 @@ daily_tasks = {
 {'Tasks': {'task 1': 'Sing', 'task 2': 'Dance'}}
 '''
 
-# Zoye's solution:
+# Zoje's solution:
 
 for val in daily_tasks.values():
     for v in val.values():
@@ -231,3 +231,20 @@ Talk
 Sing
 Dance
 '''
+
+# Christian's solution:
+
+for value in daily_tasks.items():
+    for value2 in value[1].items():
+        for value3 in value2[1].items():
+            print(value3[1])
+
+
+# Julie's solution:
+
+for i in daily_tasks.keys():
+    #print(i)
+    for j in daily_tasks[i].keys():
+        #print(j)
+         for k in daily_tasks[i][j].values():
+              print(k)
