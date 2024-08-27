@@ -289,7 +289,7 @@ except ValueError as e:
 # An error occured: Age must be a positive number.
 
 
-# Dirks example:
+# Dirk's example:
 
 '''
 import sys
