@@ -251,7 +251,7 @@ def greet(*args, **kwargs):
         print(item)
 
 
-greet(name='Jordan', age=50, height=175, weight=70, is_student=True, subjects=['Math', 'Physics', 'Programming'])
+# greet(name='Jordan', age=50, height=175, weight=70, is_student=True, subjects=['Math', 'Physics', 'Programming'])
 
 '''
 Hello Jordan, Good morning. He is 50 years old.
@@ -260,3 +260,24 @@ Math
 Physics
 Programming
 '''
+
+
+def greet(*args, **kwargs):
+    print(f"Hello {kwargs['name']}, Good morning. She is {kwargs['age']} years old.")
+    print('She is studying:')
+    for item in kwargs['subjects']:
+        print(item)
+
+
+person = {
+    'name': 'Paula', 'age': 37, 'is_student': True, 'subjects': ['Design', 'Psychology', 'Marketing']
+}
+
+greet(**person)
+
+'''
+Hello Paula, Good morning. She is 37 years old.
+She is studying:
+Design
+Psychology
+Marketing'''
