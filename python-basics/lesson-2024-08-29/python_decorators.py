@@ -339,4 +339,4 @@ def greet():
     return f'weLcoMe to pyThoN deCorAtoRs.'
 
 
-print(greet())
+print(greet()) # WELCOME TO PYTHON DECORATORS.
