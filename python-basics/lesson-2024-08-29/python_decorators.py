@@ -33,9 +33,9 @@
 
 # print(new_text())
 
-# display_new_text = decorator(display_text())
+# display_new_text = decorator(display_text()) # does not work
 
-# print(display_new_text())
+# print(display_new_text()) # does not work
 
 
 def decorator(func):
