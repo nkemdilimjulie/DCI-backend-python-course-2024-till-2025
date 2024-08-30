@@ -221,12 +221,44 @@ numbers = [1, 2, 3, 4, 5]
 
 new_numbers = (x / 5 for x in numbers)
 
-print(tuple(new_numbers)) # (0.2, 0.4, 0.6, 0.8, 1.0)
+# print(tuple(new_numbers)) # (0.2, 0.4, 0.6, 0.8, 1.0)
 
 
 # Return a list of strings from a given list where the elements are longer than 5 character using list comprehension.
 
-['Laptop', 'Monitor', 'Keyboard', 'cap', 'Headphone', 'home', 'tech', 'Lunch']
+given_list = ['Laptop', 'Monitor', 'Keyboard', 'cap', 'Headphone', 'home', 'tech', 'Lunch']
+
+resulting_list = [x for x in given_list if len(x) > 5]
+
+# print(resulting_list) # ['Laptop', 'Monitor', 'Keyboard', 'Headphone']
+
+# Return a list of upper case strings from a given list where the elements are shorter than 5 character using list comprehension. # Exercise 7
+
+
+given_list = ['Laptop', 'Monitor', 'Keyboard', 'cap', 'Headphone', 'home', 'tech', 'Lunch']
+
+resulting_list = [x.upper() for x in given_list if len(x) > 5]
+
+# print(resulting_list) # ['LAPTOP', 'MONITOR', 'KEYBOARD', 'HEADPHONE']
+
+
+
+# Return a list of strings from a given list where the elements are shorter than 5 character using list comprehension. # Exercise 7
+
+
+
+# Return a list of upper case strings from a given list where the elements are longer than 5 character using list comprehension and starts with M.
+
+given_list = ['Laptop', 'Monitor', 'Keyboard', 'cap', 'Headphone', 'home', 'tech', 'Lunch']
+
+resulting_list = [x.upper() for x in given_list if len(x) > 5 and x[0] == 'M']
+
+# print(resulting_list)
+
+
+# Return a list of upper case strings from a given list where the elements are shorter than 5 character using list comprehension and ends with e. # Exercise 8
+
+
 
 
 
@@ -234,8 +266,24 @@ print(tuple(new_numbers)) # (0.2, 0.4, 0.6, 0.8, 1.0)
 # Create a list of dictionary from two given lists using list comprehension.
 
 list_1 = ['name', 'age', 'is_employee']
-list_2 = ['Ahmed', 37, 'True']
+
+list_2 = ['Ahmed', 37, True]
 
 [{'name': 'Ahmed'}, {'age': 37}, {'is_employee': True}]
 
 
+new_list = [{x: y} for x, y in zip(list_1, list_2)]
+
+# print(new_list) # [{'name': 'Ahmed'}, {'age': 37}, {'is_employee': 'True'}]
+
+
+next_list = [{list_1[i]: list_2[i]} for i in range(len(list_1))]
+
+# print(next_list)
+
+
+dict_employee = dict(zip(list_1, list_2)) # {'name': 'Ahmed', 'age': 37, 'is_employee': True}
+
+print(dict_employee)
+
+# Create a list of tuple from two given lists using list comprehension. # Exercise 9
