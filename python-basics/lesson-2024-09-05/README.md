@@ -8,3 +8,4 @@
 * Using built-in `__name__` variable
 * Fixing circular import
 * Warehouse project collections
+* Warehouse project Functions (continue)
