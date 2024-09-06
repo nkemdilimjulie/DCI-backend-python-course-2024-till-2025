@@ -31,7 +31,7 @@ raining = False
 
 umbrella = True
 
-# if raining == False or umbrella == True:   # False == False -->  True                       ,True or True --> True
+# if raining == False or umbrella == True:   # False == False -->  True       ,True or True --> True
 #     print('You can go outside.') # You can go outside.
 
 
