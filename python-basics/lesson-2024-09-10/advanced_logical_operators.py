@@ -244,7 +244,7 @@ result = (a and b) or not (a or b)
 --> True
 '''
 
-# print(result) # False
+# print(result) # True
 
 
 def circuit_on(switch_1, switch_2):
