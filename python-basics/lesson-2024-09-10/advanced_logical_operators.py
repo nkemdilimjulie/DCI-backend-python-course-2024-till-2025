@@ -251,6 +251,7 @@ def circuit_on(switch_1, switch_2):
     return (switch_1 and switch_2) or not (switch_1 or switch_2)
 
 
-print(circuit_on(True, True))
-print(circuit_on(True, False))
+print(circuit_on(True, True)) # True
+print(circuit_on(False, False)) # True
+print(circuit_on(True, False)) # False
 
