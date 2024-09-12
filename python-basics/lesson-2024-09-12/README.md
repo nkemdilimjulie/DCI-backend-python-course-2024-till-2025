@@ -26,7 +26,6 @@ Algorithmic analysis is essential in computer science to determine the efficienc
 Big O notation describes how the runtime or space requirements of an algorithm grow as the input size increases. It focuses on the worst-case scenario and ignores constant factors or less dominant terms, giving a simplified view of the algorithm’s behavior for large inputs.
 
 
-
 ### 3. **Common Big O Notations**
 
 Here are the most commonly used notations:
@@ -44,7 +43,11 @@ Here are the most commonly used notations:
 - **O(2^n)**: Exponential time - Occurs in algorithms that solve problems by brute-force approaches, such as recursive algorithms solving the traveling salesman problem.
 
 
+### 4. **Why is Big O Important?**
 
+- **Predict Performance:** Big O helps developers predict how an algorithm will scale with larger input sizes.
+- **Optimize Code:** By understanding the time complexity, you can choose or design algorithms that perform efficiently for your use case.
+- **Comparing Algorithms:** Big O allows you to compare the efficiency of different algorithms for the same problem.
 
 
 
