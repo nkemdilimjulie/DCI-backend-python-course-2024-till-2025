@@ -11,4 +11,4 @@
 * What is algorithmic thinking?
 * Algorithms in computer programming 
 * Typical algorithms
-* Psceudo code
+* Pseudo code
