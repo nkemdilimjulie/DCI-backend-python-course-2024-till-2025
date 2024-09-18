@@ -90,5 +90,15 @@ def binary_search(lst, target):
     
     return -1
 
-print(binary_search(num_list, 70))
+print(binary_search(num_list, 30)) # 2
 ```
+
+### Comparison of Linear Search and Binary Search
+
+| Criteria          | Linear Search                        | Binary Search                      |
+|-------------------|--------------------------------------|------------------------------------|
+| Time Complexity    | O(n)                                 | O(log n)                           |
+| Space Complexity   | O(1)                                 | O(log n) (recursive), O(1) (iterative) |
+| Sorted Data        | Not required                         | Required                           |
+| Efficiency         | Less efficient for large datasets    | More efficient for large datasets  |
+| Use Case           | Best for small/unsorted datasets     | Best for large/sorted datasets     |
