@@ -5,6 +5,18 @@ class Vehicle:
     bmw = 'It is one of the most popular car brands.'
     mercedes = 'It is another luxary car brand.'
 
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+        print('This is init method and I am always called at the time of object creation.')
+        print(self.stop())
+    
+    # def initial(self, brand, model):
+    #     self.brand = brand
+    #     self.model = model
+    #     return f'I am driving {self.brand} {self.model}.'
+
+
     # Instance methods
     def start(self, key, horn):
         self.key = key
@@ -25,7 +37,11 @@ class Vehicle:
         return f'Re-fill the tank and make a sound at {self.horn} dB.'
     
 
-vehicle_1 = Vehicle()
+# vehicle_1 = Vehicle()
+# vehicle_2 = Vehicle()
+
+vehicle_1 = Vehicle('BMW', 'X11')
+# vehicle_2 = Vehicle('Tesla', 'Model 3')
 
 # print(vehicle_1) # <__main__.Vehicle object at 0x7a82fb357e50>
 # print(vehicle_1.bmw) # It is one of the most popular car brands.
@@ -47,3 +63,4 @@ vehicle_1 = Vehicle()
 
 # print(vehicle_1.fuel()) # Re-fill the tank and make a sound at 20 dB.
 
+# print(vehicle_1.initial('BMW', 'X6')) # I am driving BMW X6.
