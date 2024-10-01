@@ -3,9 +3,13 @@
 
 
 ## Thursday - 2024-09-27
+- understand inheritance basics
+- differentiate between superclasses (parent class) and subclass (child class)
+- understanding the `super()` keyword
+- learn how to override methods
 
 
-## Today - 2024-09-24
+## Today - 2024-10-01
 - Different components of of OOP
     - OOA(Object Oriented Analysis)
     - OOD (Object Oriented Design)
