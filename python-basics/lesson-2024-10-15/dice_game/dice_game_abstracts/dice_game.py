@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Type
 
-from die import Die
+from .die import Die
 
 
 class DiceGameBase(ABC):
