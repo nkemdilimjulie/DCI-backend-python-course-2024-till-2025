@@ -3,7 +3,7 @@
 ### Tuesday - 2024-10-15
 - Building the Dice Game
 
-### Today - 2024-10-10
+### Today - 2024-10-16
 - Design Patterns
 - Properties of design patterns
 - Taxonomy of Design patterns
