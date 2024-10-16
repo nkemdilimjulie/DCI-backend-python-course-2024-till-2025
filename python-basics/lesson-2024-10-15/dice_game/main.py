@@ -52,7 +52,7 @@ def main():
                 roll_pos = input(
                     f"Select which die or dice to roll from {game.dice} (separate each index by space)"
                 )
-                roll_pos = [int(pos) for pos in roll_pos]
+                roll_pos = [int(pos) for pos in roll_pos.split()]  # '0 2' -> ['0', '2']
 
             game.roll(roll_pos)
 
