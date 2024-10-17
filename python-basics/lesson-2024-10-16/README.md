@@ -9,7 +9,7 @@
 - Taxonomy of Design patterns
 - Categories of design pattern
 - Case: Singleton
-- Exercises
+- [Exercises](https://classroom.github.com/a/TlG5EJ8R)
 
 # Design Patterns
 > Instead of code reuse, with patterns we get experience reuse
