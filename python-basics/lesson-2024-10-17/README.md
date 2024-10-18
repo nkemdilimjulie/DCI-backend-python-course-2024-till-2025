@@ -8,6 +8,6 @@
 - Case: Singleton
 - [Exercises](https://classroom.github.com/a/TlG5EJ8R)
 
-### Today - 2024-10-15
+### Today - 2024-10-17
 - Design Patterns
 - Case: Strategy Pattern
