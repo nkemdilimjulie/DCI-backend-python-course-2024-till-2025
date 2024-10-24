@@ -38,5 +38,5 @@ def addition(*args):
 def multiply_2(numb1, numb2):
     total = 0
     for _ in range(numb2):
-        total = addition(total, numb1)  # 1, 2, 3
+        total = addition(total, numb1)
     return total
