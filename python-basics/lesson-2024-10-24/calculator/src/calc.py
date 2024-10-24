@@ -40,3 +40,8 @@ def multiply_2(numb1, numb2):
     for _ in range(numb2):
         total = addition(total, numb1)
     return total
+
+
+def ask_username():
+    name = input("Enter your name: ")
+    return name

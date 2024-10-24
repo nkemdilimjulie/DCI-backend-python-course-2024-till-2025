@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 
-from src.calc import addition, multiply_2
+from src.calc import addition, ask_username, multiply_2
 
 
 class MockingTestCase(unittest.TestCase):
@@ -28,8 +28,8 @@ class MockingTestCase(unittest.TestCase):
         with self.assertRaises(TypeError):
             addition(x, y)
 
-    # Use `path` as a decorator
-    # Specify path to the function to mock
+    # Use `patch` as a decorator
+    # Specify patch to the function to mock
     @patch("src.calc.addition")
     def test_multiply_2_passed(self, addition_mock):
         # Arrange
@@ -52,3 +52,31 @@ class MockingTestCase(unittest.TestCase):
         self.assertEqual(
             expected_result, result, f"Expected {expected_result}, but got {result}"
         )
+
+    # use patch with the `with statement`
+    def test_multiply_2_with_incorrect_input(self):
+        # Arrange
+        x = "4"  # numb1
+        y = 4  # numb2
+
+        with patch("src.calc.addition") as addition_mock:
+            addition_mock.side_effect = TypeError
+
+            with self.assertRaises(TypeError):
+                multiply_2(x, y)
+
+    @patch("src.calc.input")
+    def test_ask_username_passed(self, input_mock):
+        # Arrange
+        expected_name = "kevin"
+        input_mock.return_value = "kevin"
+
+        # Act
+        result = ask_username()
+
+        # Assert
+        self.assertEqual(expected_name, result)
+
+        # Check how many times the mock was called
+        # Check with whom argument the mock was called
+        input_mock.assert_called_once_with("Enter your name: ")
