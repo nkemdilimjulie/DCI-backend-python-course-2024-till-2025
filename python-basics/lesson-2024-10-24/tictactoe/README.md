@@ -14,3 +14,12 @@
 - I want to see a welcome message
 - I want to see an empty board labelled from 1 to 9
 - Players are asked to give their names
+
+### Playing the game
+- This will be in a loop
+    - Each player is asked to select a cell
+    - The board is updated after the player selects a valid cell
+    - Check if player won
+        - If player won, print congratulations message and quit the game
+    - if all cells are filled up
+        - print 'No winner!', and quit the game

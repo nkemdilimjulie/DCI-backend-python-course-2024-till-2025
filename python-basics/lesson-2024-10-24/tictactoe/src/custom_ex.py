@@ -1,0 +1,2 @@
+class CellOutOfBoundError(IndexError):
+    pass
