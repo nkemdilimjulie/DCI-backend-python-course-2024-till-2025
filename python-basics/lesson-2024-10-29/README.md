@@ -21,6 +21,9 @@
     - custom markers. Create your own markers
 
 #### Exercise
+- [python testing pytest 01](https://classroom.github.com/a/ExgMOfjs)
+- [python testing pytest 02](https://classroom.github.com/a/wkI0uKlE)
+
 ##### Tictactoe
 - Transform the unittest of tictactoe game into Pytest
 - If appropriate, use 
