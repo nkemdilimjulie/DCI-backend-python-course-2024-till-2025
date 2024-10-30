@@ -1,10 +1,6 @@
-# Python Testing - Pytest
+# Python Coding Standard
 
-### Friday - 2024-10-25
-- Attended final event of p23eo9
-- Building tictactoe game (using TDD) - Continuation
-
-### Today - 2024-10-29
+### Tuesday - 2024-10-29
 - Testing with Pytest
 - Installing pytest in virtual environment
 - Different ways of running pytest
@@ -32,3 +28,20 @@
     - markers
 ##### Dice Game
 - Can you test your dice game project???
+
+## Wednesday - 2024-10-30
+- What are coding standards
+- Why is readability important
+- Style Guides
+- Python Style Guides
+    - PEP 8
+    - The Zen of Python
+
+#### Exercise
+Read about the `PEP8`, `PEP257`, `PEP3107`, and improve the code quality of `dice game`, `tictactoe` game.
+
+#### Self-Study
+- Read The Zen of Python.
+- Explore the PEP8 recommendations.
+- Explore the PEP257 recommendations.
+- Read about Python coding standards.
