@@ -5,7 +5,7 @@ def welcome_message():
     return "WELCOME TO TIC TAC TOA GAME"
 
 
-def display_board(board):
+def display_board(board: list[None | str]):
     # TODO: Improve on this
     cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9 = board
 
