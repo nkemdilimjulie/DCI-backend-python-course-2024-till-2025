@@ -34,4 +34,4 @@ def code_counter(path: str):
 
         # /rood/a/b/c/file.txt
 
-    # DIRECTORY
+    # TODO: DIRECTORY

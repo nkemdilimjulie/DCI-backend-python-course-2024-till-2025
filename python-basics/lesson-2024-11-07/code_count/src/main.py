@@ -1,6 +1,6 @@
 import os
 
-from src.count_code import code_counter, count_code_line
+from src.count_code import code_counter
 
 
 def main():
@@ -13,3 +13,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# 8
