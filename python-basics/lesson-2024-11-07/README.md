@@ -33,7 +33,7 @@ A project that count the number of lines of code from all python files in a proj
 ### Exercises
 - [Python Basic OI file - 01](https://classroom.github.com/a/COm9WZ4R)
 
-## Today - 2024-22-07
+## Today - 2024-11-07
 **NB**: This lesson contain the pdf file on `Python IO` that is in the previous lesson folders.
 
 - Revision of yesterday's exercises
