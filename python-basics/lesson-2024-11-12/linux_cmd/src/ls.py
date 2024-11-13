@@ -3,6 +3,16 @@ import sys
 # import os
 from pathlib import Path
 
+# FIXME:
+# - What's the purpose of `argv` and `argparse`
+#### - It helps in creating a command Line Interface Application
+# - when to use os.walk.
+# input and output -> os -> manipulate your file system.
+# Path from pathlib -> manipulate the file system
+#### Object Oriented.
+### os.walk -> Path.iterdir()
+
+
 # python linux_cmd/src/ls.py
 # When we run the program without an argument, the current working directory is considered.
 # if len(sys.argv) == 1:
