@@ -11,3 +11,6 @@ if __name__ == "__main__":
     print(__name__)
     name = "Eyong"
     testing(name)
+
+
+first_name = "Enow"
