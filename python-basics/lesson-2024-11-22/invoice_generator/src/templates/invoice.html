@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Invoice Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/invoice.css">
+        
+    </head>
+        <body>
+            <div class="invoice-box">
+                <table cellpadding="0" cellspacing="0"> <tr class="top">
+                    <td colspan="8"> 
+                        <table>
+                            <tr>
+                            <td class="title">
+                            <img src="data:image/png;base64,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" style="height: 100px;"> </td>
+                            <td>
+                                <b>Invoice number</b>: {{invoice_number}}<br /> 
+                                <b>Period of service</b>: {{period_of_service[0]}} – {{period_of_service[1]}}<br /> 
+                                <b>Date</b>: {{invoice_date}}<br /><b>PO number</b>: {{po_number}}<br />
+                            </td> </tr>
+                        </table> 
+                    </td>
+                    </tr>
+                    <tr class="information"> <td colspan="8">
+                    <table> 
+                        <tr>
+                            <td>
+                                {{company_name}}<br /> {{company_address[0]}}<br />
+                                {{company_address[1]}} {{company_address[2]}}
+                            </td>
+                            <td>
+                                {{user_name}}.<br> {{user_profession}}<br> {{user_email}}
+                            </td> 
+                        </tr>
+                    </table> </td>
+                    </tr>
+                    <tr class="heading"> 
+                        <td>
+                            Description 
+                        </td>
+                        <td> 
+                            Date of Service
+                        </td> 
+                        <td>
+                            Class
+                        </td>
+                        <td>
+                            Hours
+                        </td>
+                        <td>
+                            Rate per Hour
+                        </td>
+                        <td>
+                        </td>
+                        </tr>
+                        {% for item in data %}
+                            <tr class="item"> 
+                                <td>
+                                    <b>Task {{loop.index}} - {% if item.0 =='t' %} Teaching {% else %} Mentoring {% endif %}</b>
+                                    <ul>
+                                        <li>{{item.4}}</li>
+                                    </ul>
+                                </td>
+                                <td> 
+                                    {{item.2}}
+                                </td> 
+                                <td> 
+                                    {{item.1 if item.1 else default_class}}
+                                    <!--{% if item.1 %} {{item.1}} {% else %} {{default_class}} {% endif %} -->
+                                </td>
+                                <td> 
+                                    {{item.3}}
+                                </td>
+                                <td> 
+                                    {{rate_per_hour}}
+                                </td>
+                                <td>
+                                    {{rate_per_hour * item.3}} €
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    <tr class="total"> <td></td>
+                        <td colspan="8">
+                            Total: {{total_hours * rate_per_hour}} €
+                        </td>
+                    </tr> 
+                </table>
+                </div>
+        <script src="" async defer></script>
+    </body>
+</html>
