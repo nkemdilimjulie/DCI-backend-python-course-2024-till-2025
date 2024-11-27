@@ -39,6 +39,8 @@
 For example, check the `family_members.csv` file.
 
 ## Today - 2024-11-26
+> This lesson contains the pdf file on `Databases Basic Usage`.
+
 - Database Basic Usage
     - What is postgresql
     - Set up postgresql in Ubuntu
