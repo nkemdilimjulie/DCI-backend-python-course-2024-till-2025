@@ -41,3 +41,5 @@
             - What was my best day at dci
             - Which of my children may likely catch a cold in December
             - How many books did I read last month.
+- **Self-Study**
+    - Investigate the differences between **VIEWS** and **MATERIALIZED VIEWS**.
