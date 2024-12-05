@@ -27,15 +27,18 @@
 
 ## Today - 2024-12-05
 - Building a mini project: BravoInk(`Found in the previous lesson folder`)
-        - Connect to a database
-        - Fetch data from the database
-            - Fetch all employee
-            - Fetch employee by id
-            - fetch_highly_paid
-            - count_employee_without_gender
-            - age_of_highest_paid_employee
+    - Connect to a database
+    - Fetch data from the database
+        - Fetch all employee
+        - Fetch employee by id
+        - fetch_highly_paid
+        - count_employee_without_gender
+        - age_of_highest_paid_employee
 ### Exercises
 - Complete the BravoInk project TODOs. Create the functions in the `db.py` file and test them in the `main.py`.
     - TODO: INSERT
     - TODO: UPDATE
     - TODO: DELETE
+- Practice on your **Personal Database**
+    - Connect with Python 
+    - Perform some CRUD(Create, Read, Update, Delete) operations
