@@ -102,5 +102,60 @@ def age_of_highest_paid_employee():
 
 
 # TODO: INSERT
+def insert_data(data: tuple[str, str, str, str, str, str]):
+    query = """
+        INSERT INTO company.employee
+        VALUES(DEFAULT, %s, %s, %s, %s, %s, %s)
+        RETURNING *;
+    """
+
+    with CONN.cursor() as cursor:
+        cursor.execute(query, data)
+
+        inserted_employee = cursor.fetchone()
+        # Any thing that will modify the state of your database needs to be committed
+        # insert
+        # update
+        # delete , truncate
+        CONN.commit()
+        return inserted_employee
+
+
 # TODO: UPDATE
+def update_first_name(id_, new_first_name):
+    query = """
+    UPDATE company.employee
+    SET first_name = %s
+    WHERE id=%s
+    RETURNING id, first_name;
+    """
+
+    with CONN.cursor() as cursor:
+        cursor.execute(query, (id_, new_first_name))
+        updated_values = cursor.fetchone()
+        CONN.commit()
+        return updated_values
+
+
+# TODO: UPDATE last_name
+# TODO: UPDATE email
+
+
 # TODO: DELETE
+# TODO: Delete by id
+def delete_by_id(id_):
+    query = """
+        DELETE FROM company.employee 
+        WHERE id=%s
+        RETURNING id;
+    """
+    with CONN.cursor() as cursor:
+        cursor.execute(query, (id_,))
+        deleted_id = cursor.fetchone()
+        CONN.commit()
+        return deleted_id
+
+
+# TODO: DELETE many items.
+## TODO: DELETE using BETWEEN
+## TODO: DELETE using IN

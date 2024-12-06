@@ -17,8 +17,25 @@ def main():
     # employee_without_gender = db.count_employee_without_gender()
     # print(employee_without_gender)
 
-    highest_paid_emp_age = db.age_of_highest_paid_employee()
-    print(highest_paid_emp_age)
+    # highest_paid_emp_age = db.age_of_highest_paid_employee()
+    # print(highest_paid_emp_age)
+
+    data = []  # user input to be inserted
+    for field, state in [
+        ("first_name", "r"),
+        ("date_of_birth", "r"),
+        ("last_name", "o"),
+        ("email", "r"),
+        ("gender", "o"),
+        ("salary", "o"),
+    ]:
+        input_data = input(f"{field} {'(Default None)' if state=='o' else ''}")
+        if len(input_data) == 0 and state == "o":
+            input_data = None
+        data.append(input_data)
+
+    result = db.insert_data(data)
+    print(result)
 
 
 if __name__ == "__main__":

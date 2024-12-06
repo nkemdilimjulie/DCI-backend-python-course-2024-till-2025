@@ -1,0 +1,4 @@
+reader_username,reader_title, reader_first_name, reader_last_name,book_title,book_edition,book_isbn,book_desc,book_page_count,book_published_date,read_status,start_read_date,end_read_date,percentage_read
+kevin,Dr.,kevin,enow,Iron man edition,2,3734673664731,Friction movie the book,300,2012,pending,,,0
+kevin,Dr.,,
+kevin,Mr.,,,
