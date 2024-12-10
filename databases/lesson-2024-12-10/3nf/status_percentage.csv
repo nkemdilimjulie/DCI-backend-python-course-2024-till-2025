@@ -1,0 +1,4 @@
+percentage_read\tread_status
+'[0,0]'\tpending
+'[1,99]'\treading
+'[100,100]'\tdone
