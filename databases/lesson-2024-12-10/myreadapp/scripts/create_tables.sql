@@ -4,6 +4,7 @@ CREATE SCHEMA IF NOT EXISTS project;
 SET search_path TO project;
 
 -- Create enum type
+-- enumerate data type
 CREATE TYPE book_category_enum AS ENUM('programming', 'art', 'history' , 'politics', 'other');
 CREATE TYPE reader_title_enum AS ENUM('Mrs', 'Mr', 'Dr', 'Ms', 'Miss');
 
