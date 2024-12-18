@@ -1,11 +1,19 @@
 """Connect to the database"""
 
+import environs
 import psycopg as pg
+from src.utils import ROOT_DIR
+
+# Set up the environment variable
+## Instantiate the environ
+env = environs.Env()
+
+# Provide path to the .env file
+env.read_env(str(ROOT_DIR / ".env"))  # operator overloading
+
 
 # CREATE CONNECTION
 ## Singleton class.
-
-
 class Database(object):
     """Create connection to the database.
 
@@ -23,9 +31,10 @@ class Database(object):
 
     def __init__(self):
         self._conn = pg.connect(
-            dbname="dci",
-            user="postgres",
-            password="postgres",
+            # Consume secret info from the environment variable.
+            dbname=env.str("dbname"),
+            user=env.str("user"),
+            password=env.str("password"),
             # host,
             # port
         )
