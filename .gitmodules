@@ -1,0 +1,3 @@
+[submodule "FRAMEWORK/django_project_p24_e04"]
+	path = FRAMEWORK/django_project_p24_e04
+	url = https://github.com/pietow/django_project_p24_e04.git
