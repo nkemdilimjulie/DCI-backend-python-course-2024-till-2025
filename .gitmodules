@@ -1,3 +1,6 @@
 [submodule "FRAMEWORK/django_project_p24_e04"]
 	path = FRAMEWORK/django_project_p24_e04
 	url = https://github.com/pietow/django_project_p24_e04.git
+[submodule "FRAMEWORK/message-board_p24_e04"]
+	path = FRAMEWORK/message-board_p24_e04
+	url = https://github.com/pietow/message-board_p24_e04.git
