@@ -199,10 +199,9 @@ In this case, we’ll have it display the first 50 characters of the text field.
 # posts/models.py
 from django.db import models
 class Post(models.Model):
-
     text = models.TextField()
 
-    def _ str_ (self): # new
+    def __str__ (self): # new
         return self.text[:50]
 ```
 
