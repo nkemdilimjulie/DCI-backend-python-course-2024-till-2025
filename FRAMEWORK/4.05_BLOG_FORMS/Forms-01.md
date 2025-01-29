@@ -208,7 +208,6 @@ for us.
 
 Django also comes with generic editing views for common tasks like displaying, creating, updating, or deleting a form.
 
-### CreateView
 
 ### CreateView
 
@@ -253,7 +252,7 @@ Your updated file should look as follows:
 - add a URL path for post/new/
 - give it the URL name post_new to refer to it later in our templates
 
-``python
+```python
 # blog/urls.py
 from django.urls import path
 from .views import BlogListView, BlogDetailView, BlogCreateView # new
