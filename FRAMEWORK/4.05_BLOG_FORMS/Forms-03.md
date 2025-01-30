@@ -179,6 +179,11 @@ class PostUpdateForm(ModelForm):
 
 ### CSRF Vulnerability
 
+**Disclaimer:**
+The content of this lesson is intended for educational purposes only. While we will be discussing Cross-Site Request Forgery (CSRF) attacks, including their mechanisms, potential impact, and countermeasures, the use of this knowledge should be strictly limited to ethical, responsible behavior and legal practices.
+Please ensure you have appropriate permissions before attempting to test or apply any security techniques in live environments. Unauthorized use of security vulnerabilities, including but not limited to CSRF attacks, is illegal and unethical. Always follow best practices, legal guidelines, and ethical standards in your work as a developer or security professional.
+The information shared in this session is not meant to encourage or endorse malicious behavior. It is vital to respect others' privacy, data, and systems at all times.
+
 1. Disabling CSRF Protection in Django
 
 To disable CSRF protection in Django:
