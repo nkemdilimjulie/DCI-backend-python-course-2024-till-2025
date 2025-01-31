@@ -486,3 +486,42 @@ class ProtectSpecificRoutesMiddleware:
 -  For each request, we use the resolve function to determine the URL name associated with the current path.
 - If the path doesn't correspond to any URL name, we set current_url_name to None.
 - If the URL isn't protected or the user is authenticated, we continue processing the request through subsequent middleware layers and eventually to the designated view.
+
+
+## Web Sessions
+
+**1. Requests are Stateless:**
+
+In the world of web technologies, the HTTP protocol, which forms the foundation of data communication on the World Wide Web, is stateless. 
+
+This means that each request from a client to a server is treated as an isolated transaction with no memory of previous requests. 
+
+From the perspective of the server, every request is a new one, without any context from prior interactions.
+
+**2. Web Sessions:**
+
+Because HTTP is stateless, there arose a need to maintain some **sort of state** during user interactions on websites, especially for scenarios like online shopping, logging into user accounts, etc.
+
+This is where web sessions come into play.
+
+A web session is a mechanism used to store user-specific information on the server side during multiple request-response interactions.
+
+Sessions can be implemented in various ways, like using cookies, hidden form fields, and server-side session management.
+
+The purpose is to give the user a continuous experience, as if the server "remembers" them, even though HTTP by nature does not.
+
+
+**3. User and State:**
+
+The "state" refers to any data or information about that user's interaction that we want to maintain across multiple requests.
+
+This state can include things like login status, items added to a shopping cart, **user preferences**, and more.
+
+--> while HTTP requests are inherently stateless, web sessions provide a way to maintain state across multiple interactions, ensuring a seamless user experience.
+
+
+#### Session Data with Django
+
+Django does all the hard work of managing session ids.
+
+The session property of the request object in views can be used to get and set the data.
