@@ -7,3 +7,6 @@
 [submodule "FRAMEWORK/blog_p24_e04"]
 	path = FRAMEWORK/blog_p24_e04
 	url = https://github.com/pietow/blog_p24_e04.git
+[submodule "API/library_p24_e04"]
+	path = API/library_p24_e04
+	url = https://github.com/pietow/library_p24_e04.git
