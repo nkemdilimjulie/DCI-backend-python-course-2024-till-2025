@@ -10,3 +10,6 @@
 [submodule "API/library_p24_e04"]
 	path = API/library_p24_e04
 	url = https://github.com/pietow/library_p24_e04.git
+[submodule "API/todo_p24_04"]
+	path = API/todo_p24_04
+	url = https://github.com/pietow/todo_p24_04.git
