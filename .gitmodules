@@ -16,3 +16,6 @@
 [submodule "API/todo_client_p24_e04"]
 	path = API/todo_client_p24_e04
 	url = https://github.com/pietow/todo_client_p24_e04.git
+[submodule "API/blog_api_p24_e04"]
+	path = API/blog_api_p24_e04
+	url = https://github.com/pietow/blog_api_p24_e04.git
