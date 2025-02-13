@@ -135,3 +135,110 @@ class BasePermission:
         return True
 ```
 
+For a custom permission class you can override one or both of these methods. 
+
+has_permission works on list views while detail views execute both:
+- first has_permission and then, if that passes, has_object_permission.
+
+It is **strongly advised** to always set both methods explicitly because each defaults to True, meaning they will allow access implicitly unless set explicitly.
+
+In our case, we want only the author of a blog post to have write permissions to edit or delete it. 
+
+We also want to restrict read-only list view to authenticated users. 
+
+To do this we'll create a new file called posts/permissions.py and fill it with the following code:
+
+```python
+# posts/permissions.py
+from rest_framework import permissions
+
+class IsAuthorOrReadOnly(permissions.BasePermission):
+    def has_permission(self, request, view):
+        # Authenticated users only can see list view
+        if request.user.is_authenticated:
+            return True
+        return False
+
+    def has_object_permission(self, request, view, obj):
+        # Read permissions are allowed to any request so we'll always
+        # allow GET, HEAD, or OPTIONS requests
+        if request.method in permissions.SAFE_METHODS:
+            return True
+
+        # Write permissions are only allowed to the author of a post
+        return obj.author == request.user
+```
+
+We import permissions at the top and then create a custom class IsAuthorOrReadOnly which extends BasePermission. 
+
+The first method, has_permission, requires that a user be logged in, or authenticated, in order to have access. 
+
+The second method, has_object_permission, allows read-only requests but limits write permissions to only the author of the blog post. 
+
+We access the author field via obj.author and the current user with request.user.
+
+in the views.py file we can remove the permissions import because we will swap out PostDetail’s permissions
+IsAdminUser in favor of importing our custom IsAuthorOrReadOnly permission. 
+
+```python
+# posts/views.py
+from rest_framework import generics
+from .models import Post
+from .permissions import IsAuthorOrReadOnly # new
+from .serializers import PostSerializer
+
+class PostList(generics.ListCreateAPIView):
+    permission_classes = (IsAuthorOrReadOnly,) # new
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAuthorOrReadOnly,) # new
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+```
+And we're done.
+
+To create only posts for the currently logged-in user you can change the code as follows:
+
+```python
+#posts/views.py
+from rest_framework import permissions
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from .models import Post
+from .permissions import IsAuthorOrReadOnly
+from .serializers import PostSerializer
+
+class PostList(ListCreateAPIView):
+    permission_classes = (IsAuthorOrReadOnly,)
+    # permission_classes = (permissions.IsAdminUser,) # new
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+```
+
+To display only post of the currently logged-in user if not superuser:
+
+```python
+from rest_framework.generics import (ListCreateAPIView,
+                            RetrieveUpdateDestroyAPIView)
+from .models import Post
+from .permissions import IsAuthorOrReadOnly
+from .serializers import PostSerializer
+
+class PostList(ListCreateAPIView):
+    permission_classes = (IsAuthorOrReadOnly, )
+    # queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+    def get_queryset(self):
+        if self.request.user.is_superuser:
+            return Post.objects.all()
+        return Post.objects.filter(author=self.request.user)
+```
