@@ -1,4 +1,4 @@
-# Django API - Blog - 1: Permissions & Testing
+# Django API - Blog - 2: Permissions & Testing
 
 >Learning Goals
 >- Understanding django restful persission system
