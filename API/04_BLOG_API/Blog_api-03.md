@@ -348,3 +348,59 @@ We use them and don't need to reinventing the wheel.
 First we will add log in, log out, and password reset API endpoints. 
 
 These come out-of-the-box with the popular dj-rest-auth package. 
+
+```Shell
+(.venv) > pip install dj-rest-auth
+```
+Add the new app to the INSTALLED_APPS config in our django_project/settings.py file.
+
+```python
+# django_project/settings.py
+INSTALLED_APPS = [
+"django.contrib.admin",
+"django.contrib.auth",
+"django.contrib.contenttypes",
+"django.contrib.sessions",
+"django.contrib.messages",
+"django.contrib.staticfiles", 
+# 3rd-party apps
+"rest_framework",
+"rest_framework.authtoken",
+"dj_rest_auth", # new
+# Local
+"accounts.apps.AccountsConfig",
+"posts.apps.PostsConfig",
+]
+```
+Update our django_project/urls.py file with the dj_rest_auth package. 
+
+We're setting the URL routes to api/v1/dj-rest-auth. 
+
+Make sure to note that URLs should have a dash - not an underscore _, which is an easy mistake to make.
+
+```python
+# django_project/urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("api/vi/", include("posts.urls")),
+    path("api-auth/", include("rest_framework.urls")),
+    path("api/v1/dj-rest-auth/", include("dj_rest_auth.urls"))
+
+]
+```
+And we’re done!
+
+We have a working log in endpoint at http://127.0.0.1:8000/api/v1/dj-rest-auth/login/.
+
+And a logout endpoint at http://127.0.0.1:8000/api/v1/dj-rest-auth/logout/.
+
+to use it in postmen: use `Authorization: Token {{token}}`
+
+
+
+http://127.0.0.1:8000/api/v1/dj-rest-auth/password/reset
+
+http://127.0.0.1:8000/api/v1/dj-rest-auth/password/reset/confirm
