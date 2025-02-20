@@ -489,7 +489,7 @@ async def probe(domain):
         return (domain, True)
 
 async def main():
-    domains = ( f'{kw}.dev'.lower() for kw in kwlist )
+    domains = [ f'{kw}.dev'.lower() for kw in kwlist ] # can either be a list or a generator
     coros = [ probe(domain) for domain in domains]
     for coros in asyncio.as_completed(coros):
         domain, found = await coros
