@@ -204,7 +204,7 @@ the benefits of virtualization to provide both superior performance and pricing.
     - The trade-off is that you get to closely configure every layer of your operating stack.
 
 AWS IaaS products include: 
-- Elastic Cloud Compute (EC2) for virtual machine instances, 
+- Elastic Compute Cloud (EC2) for virtual machine instances, 
 - Elastic Block Store (EBS) for storage volumes, and 
 - Elastic Load Balancing.
 
