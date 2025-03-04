@@ -136,3 +136,81 @@ sudo apt install docker-ce docker-ce-cli containerd.io
 ```bash
 sudo systemctl status docker
 ```
+
+**7. Start Docker (if not running):**
+
+```bash
+sudo systemctl start docker
+```
+
+**8. Check the Docker version:**
+
+```bash
+docker --version
+```
+
+* To manage Docker as a non-root user, create a Docker group and add your user to it:
+
+```bash
+  sudo groupadd docker
+  sudo usermod -aG docker $USER
+```
+
+**9. Run a simple container:**
+
+```bash
+docker run hello-world
+```
+
+#### Images
+
+It’s useful to think of a Docker image as an object that contains an OS 
+filesystem, an application, and all application dependencies. 
+If you work  in operations, it’s like a virtual machine template. 
+A virtual machine  template is essentially a stopped virtual machine. 
+
+In the Docker world, 
+an image is effectively a stopped container. 
+As a developer, you can think of an image as a class.
+
+
+Run the docker images command on your Docker host.
+
+
+```bash
+$ docker images
+
+REPOSITORY TAG IMAGEID CREATED SIZE
+```
+If you are working from a freshly installed Docker host, or Play With
+Docker, you'll have no images
+
+Getting images onto your Docker host is called pulling.
+
+Pull the **ubuntu:latest** image.
+
+```bash
+$ docker pull ubuntu:latest
+```
+
+Run the docker images command again to see the image you just pulled.
+
+```bash
+$ docker images
+```
+
+An image contains enough of an operating system (0S), as well as all the code and 
+dependencies to run whatever application it’s designed for.
+
+The ubuntu image that we’ve pulled has a stripped-down version of the Ubuntu Linux 
+filesystem and a few of the common Ubuntu utilities. 
+
+If you pull an application container, such as **nginx:latest**, you'll get an 
+image with a minimal OS as well as the code to run the app (NGINX).
+
+It's also worth noting that each image gets its own unique ID.
+When referencing images, you can refer to them using either IDs or names.
+
+If you're working with image ID's, it’s usually enough to type the first few 
+characters of the ID — as long as it’s unique, Docker will know which 
+image you mean. 
