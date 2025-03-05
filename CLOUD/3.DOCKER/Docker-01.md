@@ -109,41 +109,22 @@ sudo apt update
 **2. Install required dependencies:**
 
 ```bash
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install docker.io -y
 ```
 
-**3. Add the Docker repository:**
-
-```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-```
-
-**4. Update the package lists again:**
-
-```bash
-sudo apt update
-```
-
-**5. Install Docker CE (Community Edition):**
-
-```bash
-sudo apt install docker-ce docker-ce-cli containerd.io
-```
-
-**6. Verify the installation:**
+**3. Verify the installation:**
 
 ```bash
 sudo systemctl status docker
 ```
 
-**7. Start Docker (if not running):**
+**4. Start Docker (if not running):**
 
 ```bash
 sudo systemctl start docker
 ```
 
-**8. Check the Docker version:**
+**5. Check the Docker version:**
 
 ```bash
 docker --version
@@ -154,9 +135,10 @@ docker --version
 ```bash
   sudo groupadd docker
   sudo usermod -aG docker $USER
+  newgrp docker
 ```
 
-**9. Run a simple container:**
+**6. Run a simple container:**
 
 ```bash
 docker run hello-world
