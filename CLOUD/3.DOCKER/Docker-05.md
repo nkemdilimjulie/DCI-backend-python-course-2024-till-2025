@@ -352,3 +352,7 @@ curl http://localhost:5001
 ```
 - If successful, it will return **NGINX's default welcome page**.
 
+
+## Add PostgreSQL to django
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu
